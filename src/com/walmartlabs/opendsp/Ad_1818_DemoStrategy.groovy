@@ -25,7 +25,7 @@ class Ad_1818_DemoStrategy extends AdImpl {
 			new Tag_2184_DemoCreative_1818_DemoStrategy(this)
 		]
                 
-                adVersion=7
+                adVersion=8
                 
                 
  		clientId="136"
@@ -34,7 +34,7 @@ class Ad_1818_DemoStrategy extends AdImpl {
 		advertiserId="236"
 
 		abTesting = true
-		abTestingControlShare = 0.6
+		abTestingControlShare = 1
 
  		geos = [
 			new TargetingGeo(null,null,null,"us",null)
