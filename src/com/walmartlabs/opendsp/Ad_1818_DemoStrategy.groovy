@@ -18,14 +18,16 @@ class Ad_1818_DemoStrategy extends AdImpl {
 
 		adomain = ["test.com"]
 		desc = "Demo Strategy"
-		bidAmount = 0
 		iurl = "http://creative.us.s3.opendsp.com/creatives/2184/myip300x250_updated.jpg"
+                
+                bidAmount = 0
+                bidPriceCalculator = new BidPriceCalculator_1();
                 
 		tags = [
 			new Tag_2184_DemoCreative_1818_DemoStrategy(this)
 		]
                 
-                adVersion=10
+                adVersion=12
                 
                 
  		clientId="136"
