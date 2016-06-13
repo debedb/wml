@@ -1,5 +1,5 @@
 
-package com.enremmeta.rtb.groovy.tc
+package com.walmartlabs.opendsp
 
 import groovy.transform.InheritConstructors
 
@@ -20,7 +20,7 @@ public class Tag_2184_DemoCreative_1818_DemoStrategy extends TagImpl {
 
 	@Override
 	public void init() {
-                tagVersion=6
+                tagVersion=9
 		markupType = MarkupType.THIRD_PARTY_FLASH 
 		video = false
 		banner = true
@@ -141,6 +141,8 @@ public class Tag_2184_DemoCreative_1818_DemoStrategy extends TagImpl {
 
 <img src=\"$proto://s.opendsp.com/man/impression/?iid=$iId&cid=$adId&crid=$id&bid=$bId&brId=$brId&comment=GGTEST&xch=$exchange&ssp=$ssp\" width=\"0\" height=\"0\"></img>
 <img src=\"$Macros.MACRO_LOT49_IMPRESSION\" width=\"0\" height=\"0\"></img>
+
+
 
 
 
