@@ -1,5 +1,5 @@
 
-package com.enremmeta.rtb.groovy.tc
+package com.walmartlabs.opendsp
 
 import groovy.transform.InheritConstructors
 
@@ -20,7 +20,7 @@ public class Tag_2184_DemoCreative_1818_DemoStrategy extends TagImpl {
 
 	@Override
 	public void init() {
-                tagVersion=8
+                tagVersion=10
 		markupType = MarkupType.THIRD_PARTY_FLASH 
 		video = false
 		banner = true
