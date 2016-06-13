@@ -1,4 +1,4 @@
-package com.enremmeta.rtb.groovy.tc
+package com.walmartlabs.opendsp
 
 import com.enremmeta.rtb.api.AdImpl
 
@@ -25,7 +25,7 @@ class Ad_1818_DemoStrategy extends AdImpl {
 			new Tag_2184_DemoCreative_1818_DemoStrategy(this)
 		]
                 
-                adVersion=6
+                adVersion=9
                 
                 
  		clientId="136"
