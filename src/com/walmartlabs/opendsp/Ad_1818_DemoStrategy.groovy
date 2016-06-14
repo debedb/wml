@@ -27,7 +27,7 @@ class Ad_1818_DemoStrategy extends AdImpl {
 			new Tag_2184_DemoCreative_1818_DemoStrategy(this)
 		]
                 
-                adVersion=14
+                adVersion=15
                 
                 
  		clientId="136"
