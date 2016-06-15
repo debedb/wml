@@ -21,13 +21,13 @@ class Ad_1818_DemoStrategy extends AdImpl {
 		iurl = "http://creative.us.s3.opendsp.com/creatives/2184/myip300x250_updated.jpg"
                 
                 bidAmount = 0
-                
+                bidPriceCalculator = new BidPriceCalculator_1();
                 
 		tags = [
 			new Tag_2184_DemoCreative_1818_DemoStrategy(this)
 		]
                 
-                adVersion=15
+                adVersion=16
                 
                 
  		clientId="136"
@@ -36,7 +36,7 @@ class Ad_1818_DemoStrategy extends AdImpl {
 		advertiserId="236"
 
 		abTesting = true
-		abTestingControlShare = 1
+		abTestingControlShare = 0.2
 
  		geos = [
 			new TargetingGeo(null,null,null,"us",null)
