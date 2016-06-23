@@ -20,7 +20,7 @@ public class Tag_2184_DemoCreative_1818_DemoStrategy extends TagImpl {
 
 	@Override
 	public void init() {
-                tagVersion=16
+                tagVersion=17
 		markupType = MarkupType.THIRD_PARTY_FLASH 
 		video = false
 		banner = true
