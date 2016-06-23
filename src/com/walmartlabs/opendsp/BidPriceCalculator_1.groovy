@@ -8,6 +8,7 @@ import com.enremmeta.rtb.api.BidPriceCalculatorImpl
 import com.enremmeta.rtb.api.proto.openrtb.OpenRtbRequest
 import com.enremmeta.rtb.api.proto.openrtb.lot49.Lot49ExtRemote
 import com.enremmeta.rtb.spi.providers.integral.IntegralInfoReceived
+import com.enremmeta.rtb.spi.providers.integral.result.dto.ViewabilityDto;
 
 /** 
  * @author Gregory Golberg (<a
@@ -31,10 +32,27 @@ class BidPriceCalculator_1 extends BidPriceCalculatorImpl {
     public long getBidPrice(Ad ad, OpenRtbRequest req) {
         Lot49ExtRemote extRem = req.getLot49Ext().getLot49ExtRemote();
         IntegralInfoReceived iir = extRem.getIntegralInfoReceived();
+        double scoreDouble = 0.0;
         long iirScore = 1;
         if (iir != null) {
-            iirScore =  iir.getViewabilityDto().getIviab();
+            ViewabilityDto uem = iir.getViewabilityDto();
+            if (uem != null) {
+                iirScore =  uem.getIviab();
+            }
         }
-        extRem.userSegments.getUserSegmentsMap();
+        Map<String, Map<String, String>> userSegmentsMap = extRem.userSegments.getUserSegmentsMap();
+
+
+        if (userSegmentsMap != null) {
+            Set<String> segments = userSegmentsMap.keySet();
+            if (segments != null && segments.size() > 0) {
+                // We can pick any segment here...
+                String firstSegment = segments.iterator().next();
+                scoreDouble = getScore(userSegmentsMap, firstSegment);
+
+            }
+        }
+        long score = (long)(scoreDouble * iirScore);
+        return score
     }
 }
