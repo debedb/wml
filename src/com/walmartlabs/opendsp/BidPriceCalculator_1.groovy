@@ -52,7 +52,7 @@ class BidPriceCalculator_1 extends BidPriceCalculatorImpl {
 
             }
         }
-        long score = (long)(scoreDouble * iirScore);
+        long score = (long)(scoreDouble * iirScore * 100);
         return score
     }
 }
